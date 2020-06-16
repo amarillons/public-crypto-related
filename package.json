@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/amarillons/public-crypto-related#readme",
   "devDependencies": {
-    "jest": "^26.0.1"
+    "jest": "^26.0.1",
+    "web3": "^1.2.9"
   }
 }
