@@ -1,0 +1,22 @@
+{
+  "name": "public-crypto-related",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amarillons/public-crypto-related.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amarillons/public-crypto-related/issues"
+  },
+  "homepage": "https://github.com/amarillons/public-crypto-related#readme",
+  "devDependencies": {
+    "jest": "^26.0.1"
+  }
+}
