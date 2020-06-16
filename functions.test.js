@@ -15,5 +15,19 @@ test('testing x squared', () => {
 test('testing get balance', async () => {
     const result = await functions.getBalance(constants.tokenAddress, constants.eoaAddressForTesting)
     console.log(`result is ${result}`)
-    expect(result).toBe(result);
+    const balance = parseInt(result)
+    expect(balance).toBeGreaterThan(100);
+})
+
+test('get nonce', async () => {
+    const address = constants.eoaAddressForTesting2;
+    const result = await functions.getNonce(address);
+    const nonce = parseInt(result);
+    console.log(`nonce is ${nonce}`);
+    expect(nonce).toBeGreaterThan(8);
+})
+
+test('generating raw transaction', async () => {
+
+    // generateRawTransaction();    
 })
