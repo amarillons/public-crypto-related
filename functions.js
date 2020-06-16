@@ -37,13 +37,17 @@ const functions = {
     },
     generateRawTransaction: (nonce, gasPrice, tokenAddress, eoaAddress, originAddress, amountDecimal) => {
 
-        console.log('nonce:', nonce);
-        console.log(`eoa: ${eoaAddress}, token: ${tokenAddress}, amountDecimal: ${amountDecimal}`)
+        const provider = 'https://rinkeby.infura.io/v3/' + constants.projectId;
+        const web3 = new Web3(provider);
+
+        // console.log('nonce:', nonce);
+        // console.log(`eoa: ${eoaAddress}, token: ${tokenAddress}, amountDecimal: ${amountDecimal}`)
 
         const amountInt = web3.utils.toWei(amountDecimal.toString());
         const amountHex = web3.utils.toHex(amountInt);
+        const chainId = 4;
 
-        console.log(`amount hex is ${amountHex}`);
+        // console.log(`amount hex is ${amountHex}`);
 
         const rawTransaction = {
             "from": originAddress,

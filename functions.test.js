@@ -39,18 +39,26 @@ test('testing eoa account decryption from private key', async () => {
     expect(decryptedAccount.address).toBe(constants.eoaAddressForTesting2);
 })
 
-// test('generating raw transaction', async () => {
+test('generating raw transaction', async () => {
 
-//     const address = constants.eoaAddressForTesting2;
-//     const result = await functions.getNonce(address);
-//     const nonce = parseInt(result);
+    const provider = 'https://rinkeby.infura.io/v3/' + constants.projectId;
+    const web3 = new Web3(provider);
 
-//     const gwei = 1000000000;
-//     let initialGasPrice = 10 * gwei;
-//     let gasPrice = initialGasPrice;
-//     const tokenAddress = constants.tokenAddress;
-//     const eoaAddress = constants.eoaAddressForTesting;
-//     const originAddress = decryptedAccount.address
+    const address = constants.eoaAddressForTesting2;
+    const result = await functions.getNonce(address);
+    const nonce = parseInt(result);
 
-//     generateRawTransaction(nonce, gasPrice, tokenAddress, eoaAddress, originAddress, amountDecimal)
-// })
+    const gwei = 1000000000;
+    let initialGasPrice = 10 * gwei;
+    let gasPrice = initialGasPrice;
+    const tokenAddress = constants.tokenAddress;
+    const eoaAddress = constants.eoaAddressForTesting;
+    const originAddress = web3.eth.accounts.privateKeyToAccount(constants.eoaAddressForTesting2PrivateKey).address;
+    const amountDecimal = 0.12;
+
+    const rawTx = await functions.generateRawTransaction(nonce, gasPrice, tokenAddress, eoaAddress, originAddress, amountDecimal)
+    // console.log(`raw transation is ${JSON.stringify(rawTx)}`);
+    expect(rawTx.from).toBe(originAddress);
+    expect(rawTx.to).toBe(tokenAddress);
+
+})
