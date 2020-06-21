@@ -14,3 +14,8 @@ Node.js 関連の公開リポジトリ
 - CircleCI を使っています。
 - 設定ファイルは、.circleci/config.yml にあります。
 - master に、テストをパスすることを protection rule として設定しています。
+
+
+### 動作について
+- 現在のところ、raw transaction を生成して、transaction の内容をテストする　という部分まで入っています。
+- raw transaction に署名して infura 等で送る部分は、将来的に追記予定。
