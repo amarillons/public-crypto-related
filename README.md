@@ -19,13 +19,14 @@ Node.js 関連の公開リポジトリ
 - `$ npm install`
 - `$ nodemon index.js`
 - トークンを送るには、`/send_token` に次のような body の POST リクエストを送ります。
+[index.js](https://github.com/amarillons/public-crypto-related/blob/e9a7360e445270bf9a1c5349229875c0d06488ab/index.js#L81)
 ```
     { to_address: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
      token_address: '0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
       amount_decimal: '0.12345678' }
 ```
-- トークンを送るときは、Ethereum メインネットではなくて rinkeby testnet で送信します。
-- トークン送信以外にも、`/balance` でトークン残高取得、`/new_address` で新規アドレス生成ができるようにもなっています。
+- トークンを送るときは、Ethereum メインネットではなくて Rinkeby testnet で送信します。
+- トークン送信以外にも、`/balance` でトークン残高取得、`/new_address` で新規アドレス生成ができるようになっています。
 - raw transaction に署名して infura のノード経由で送信します。
 
 ### 使用技術について
