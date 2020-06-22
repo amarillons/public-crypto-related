@@ -26,7 +26,7 @@ Node.js 関連の公開リポジトリ
 ```
 - トークンを送るときは、Ethereum メインネットではなくて rinkeby testnet で送信します。
 - トークン送信以外にも、`/balance` でトークン残高取得、`/new_address` で新規アドレス生成ができるようにもなっています。
-- raw transaction に署名して infura 等で送っています。
+- raw transaction に署名して infura のノード経由で送信します。
 
 ### 使用技術について
 - Node.js, npm
