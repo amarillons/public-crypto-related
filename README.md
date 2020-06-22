@@ -15,7 +15,26 @@ Node.js 関連の公開リポジトリ
 - 設定ファイルは、.circleci/config.yml にあります。
 - master に、テストをパスすることを protection rule として設定しています。
 
-
 ### 動作について
-- 現在のところ、raw transaction を生成して、transaction の内容をテストする　という部分まで入っています。
-- raw transaction に署名して infura 等で送る部分は、将来的に追記予定。
+- `$ npm install`
+- `$ nodemon index.js`
+- トークンを送るには、`/send_token` に次のような body の POST リクエストを送ります。
+```
+    { to_address: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+     token_address: '0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
+      amount_decimal: '0.12345678' }
+```
+- トークンを送るときは、Ethereum メインネットではなくて rinkeby testnet で送信します。
+- トークン送信以外にも、`/balance` でトークン残高取得、`/new_address` で新規アドレス生成ができるようにもなっています。
+- raw transaction に署名して infura 等で送っています。
+
+### 使用技術について
+- Node.js, npm
+- express フレームワーク
+- Ethereum: web3.js [https://web3js.readthedocs.io/en/v1.2.9/](https://web3js.readthedocs.io/en/v1.2.9/)
+- Ethereum: infura [https://infura.io/](https://infura.io/)
+- Jest （自動テスト）
+- CircleCI (自動テスト）
+- Firebase Cloud Function (GCP のサーバーレスバックエンド)
+
+
