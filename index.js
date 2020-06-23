@@ -60,8 +60,6 @@ app.get('/new_address', function (req, res) {
 
     const account = web3.eth.accounts.create();
 
-    console.log(`mylib is ${mylib.myfunc()}`);
-
     // サーバーで鍵を生成する。テストネットなのでできる。
     res.send(`account private key is ${account.privateKey}\n`)
 })
