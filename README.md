@@ -1,4 +1,7 @@
 # public-crypto-related
+
+[![CircleCI](https://circleci.com/gh/amarillons/public-crypto-related/tree/develop.svg?style=svg)](https://circleci.com/gh/amarillons/public-crypto-related/tree/develop)
+
 Node.js 関連の公開リポジトリ
 
 ### テストについて
