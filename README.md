@@ -21,8 +21,8 @@ Node.js 関連の公開リポジトリ
 ### 動作について
 - `$ npm install`
 - `$ nodemon index.js`
-- トークンを送るには、`/send_token` に次のような body の POST リクエストを送ります。
-[index.js](https://github.com/amarillons/public-crypto-related/blob/a5e05b3fe892b9272e73017c8bdf900d3514b44c/index.js#L79)
+- トークンを送るには、[`/send_token`](https://github.com/amarillons/public-crypto-related/blob/a5e05b3fe892b9272e73017c8bdf900d3514b44c/index.js#L79) に次のような body の POST リクエストを送ります。
+[該当箇所](https://github.com/amarillons/public-crypto-related/blob/a5e05b3fe892b9272e73017c8bdf900d3514b44c/index.js#L79)
 ```
     { to_address: '0xaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
      token_address: '0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb',
