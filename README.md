@@ -29,7 +29,7 @@ Node.js 関連の公開リポジトリ
       amount_decimal: '0.12345678' }
 ```
 - トークンを送るときは、Ethereum メインネットではなくて Rinkeby testnet で送信します。
-- トークン送信以外にも、`/balance` でトークン残高取得、`/new_address` で新規アドレス生成ができるようになっています。
+- トークン送信以外にも、[`/balance`](https://github.com/amarillons/public-crypto-related/blob/e9a7360e445270bf9a1c5349229875c0d06488ab/index.js#L69) でトークン残高取得、[`/new_address`](https://github.com/amarillons/public-crypto-related/blob/e9a7360e445270bf9a1c5349229875c0d06488ab/index.js#L59) で新規アドレス生成ができるようになっています。
 - raw transaction に署名して infura のノード経由で送信します。
 
 ### 使用技術について
